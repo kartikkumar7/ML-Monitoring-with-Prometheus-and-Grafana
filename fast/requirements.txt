@@ -1,0 +1,10 @@
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.1.0/en_core_web_md-3.1.0-py3-none-any.whl
+pydantic==1.8.2
+uvicorn==0.14.0
+gunicorn==20.0.4
+fastapi==0.67.0
+torch==1.9.0
+spacy
+transformers==4.6.1
+prometheus_client==0.11.0
+starlette_exporter==0.11.0
