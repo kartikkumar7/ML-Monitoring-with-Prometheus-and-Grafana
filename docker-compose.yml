@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  fastapi:
+    build: fast/
+    ports: 
+      - 80:80
+    networks:
+      - deploy_network
+    container_name: fastapi_pro
+
+  prometheus:
+    build: prometheus/
+    depends_on:
+      - fastapi
+    ports: 
+        - 9090:9090
+    networks:
+      - deploy_network
+    container_name: prometheus_
+
+networks:
+  deploy_network:
+    driver: bridge
